@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.login-container {
+  background: linear-gradient(to bottom, rgb(154,198,227), rgb(138,245,116));
+  padding-top: 50%;
+  height: 100vh;
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.login-image {
+  width: 60%;
+  max-width: 300px;
+}
+
+.btn-modal {
+  border-radius: 50px;
+  width: 50%;
+  height: 7%;
+  max-width: 200px;
+  background: linear-gradient(to bottom, rgb(10, 73, 121), rgb(24, 171, 171));
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border: solid .5px white;
+}
+.login-title{
+  padding-bottom: 30%;
+}
+.login-form-container{
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  //height: 100vh;
+  //background-color: black;
+  padding-top: 6%;
+}
+.login-form-container h2{
+  padding-bottom: 6%;
+}
+.input-group{
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+ion-input{
+  //border: solid .5px red;
+  width: 80%;
+  border-radius: 20px;
+  background-color: rgb(222, 222, 222);
+  color: black;
+}
+.register-link{
+  text-decoration: none;
+  padding-top: 10%;
+}
+.login-button{
+  padding: 15px 50px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, rgb(10, 73, 121), rgb(24, 171, 171));
+  color: white;
+}

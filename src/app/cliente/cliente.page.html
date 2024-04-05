@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true">
+  <div class="fondo">
+    <div class="head1">
+      <div class="head">
+        <img src="assets/img/logoo21.png" alt="">
+        <h4>Mandaditos Xathe</h4>
+      </div>
+      <div class="head">
+        <h1>{{mensaje}} {{nombre}}</h1>
+      </div>
+    </div>
+      <div class="imghead">
+        <img src="assets/img/carru.png" alt="">
+      </div>
+    <div class="contenedor">  
+        <!-- <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <ion-icon name="search-outline"></ion-icon>
+          </span>
+          <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+        </div> -->
+      <!-- imagenes en el catalogo -->
+      <div class="imgcarru">
+        <div class="imagen-con-texto" >
+          <img src="assets/img/comida1.jpg" (click)="orden('comida')" alt="">
+          <span class="imagen-con-texto" >Comida</span>
+        </div>
+        <div class="imagen-con-texto">
+          <img src="assets/img/tienda1.jpg" (click)="orden('abarrotes')" alt="">
+          <span>Abarrotes</span>
+        </div>
+      </div>
+      <div class="imgcarru">
+        <div class="imagen-con-texto">
+          <img src="assets/img/farmacia1.jpg" (click)="orden('farmacia')" alt="">
+          <span class="">farmacia </span>
+        </div>
+        <div class="imagen-con-texto">
+          <img src="assets/img/img4.jpg" (click)="orden('ferreteria')" alt="">
+          <span>Ferreteria</span>
+        </div>
+      </div>
+    </div>
+
+  <div class="navigation">
+    <ul>
+      <li class="list" [class.active]="isTabActive('cliente')">
+        <a>
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">Inicio</span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isTabActive('perfil')">
+        <a (click)="us()">
+          <span class="icon">
+            <ion-icon name="person-outline"></ion-icon>
+          </span>
+          <span class="text">Perfil</span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isTabActive('pedidos')">
+        <a (click)="ped()">
+          <span class="icon">
+            <ion-icon name="storefront-outline"></ion-icon>
+          </span>
+          <span class="text">Pedidos</span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isTabActive('exit')">
+        <a (click)="logout()">
+          <span class="icon">
+            <ion-icon name="exit-outline"></ion-icon>
+          </span>
+          <span class="text">Exit</span>
+        </a>
+      </li>
+    </ul>
+  </div>  
+</div>
+</ion-content>

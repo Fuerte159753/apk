@@ -1,0 +1,43 @@
+  <ion-content [fullscreen]="true">
+    <div class="login-container">
+      <div class="login-image-container">
+        <img class="login-image" src="assets/img/logoo21.png">
+      </div>
+
+      <div class="login-title">
+        <h1>Mandaditos Xathe</h1>
+      </div>
+
+      <button class="btn-modal" id="open-modal">Iniciar</button>
+    </div>
+  </ion-content>
+      <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5]">
+        <ng-template>
+          <ion-content>
+            <div class="content">
+              <div class="login-form-container">
+                <form (ngSubmit)="login()" class="login-form">
+                  <h2>Inicia sesión</h2>
+                  <br>
+                  <div class="login-fields">
+                    <div class="input-group">
+                      <ion-input type="email" [(ngModel)]="email" name="email" class="form-control" placeholder="usuario" required></ion-input>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="input-group">
+                      <ion-input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Contraseña"required></ion-input>
+                    </div>
+                  </div>
+                  <div class="login-register">
+                    <p>¿No tienes una cuenta? <a routerLink="/registro" (click)="modal.dismiss()" class="register-link">Regístrate</a></p>
+                  </div>
+                  <div class="div-button">
+                    <button class="login-button" shape="round" type="submit" expand="full">Iniciar sesión</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </ion-content>
+        </ng-template>
+      </ion-modal>

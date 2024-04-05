@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="fondo">
+    <div class="head1">
+      <div class="head">
+        <img src="assets/img/logoo21.png" alt="">
+        <h4>Mandaditos Xathe</h4>
+      </div>
+    </div>
+
+    
+    <div class="text">
+        <h1>!Hola! para seguir,</h1>
+        <h1>ingresa tu codigo.</h1>
+        <h3>Ingrese el codigo</h3>
+    </div>
+    <form >
+      <div class="formulario">
+          <ion-input class="custom-input" type="number" name="codigo" id="codigo" [(ngModel)]="codigo" placeholder="Codigo: "></ion-input>
+          <div class="d-btn">
+            <button class="btn" expand="block" type="submit" (click)="ver()">Confirmar</button>
+          </div>
+        </div>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.fondo {
+  height: 100vh;
+  background-color: white;
+  align-items: center;
+  margin: 0 auto;
+}
+.head1{
+  background: linear-gradient(to left, rgb(138,245,116),rgb(154,198,227));
+  width: 100%;
+  display: flex;
+}
+.head {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.head img {
+  width: 85px;
+  margin-right: 10px;
+}
+
+.head h4 {
+  margin: 0;
+  color: #0f0d0d;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.head h1 {
+  margin: 0;
+  color: #0f0d0d;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin-left: 35px;
+}
+.imghead{
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  display:flex;
+}
+.imghead img{
+  width: 100%;
+  margin: 0 auto;
+  padding-left: -5%;
+}
+.men{
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 10%;
+}
+.men h1{
+  margin: 0;
+  color: #0f0d0d;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.ite{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10%;
+  padding-left: 27%;
+  padding-bottom: 10%;
+}
+.ite .ico{
+  padding-top: 4%;
+  padding-right: 4%;
+  font-size: 50px;
+}
+.ite h2{
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+form{
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.form-container{
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  
+}
+.custom-input{
+  width: 80%;
+  margin: 0 auto;
+  border: solid .5px #5b5b5b;
+  padding-left: 10px ;
+  padding-right: 10px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(222, 222, 222);
+
+}
+.btn{
+  color: white;
+  padding: 10px 50px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 20px;
+  font-size: 21px;
+  background: linear-gradient(to bottom, rgb(10, 73, 121), rgb(24, 171, 171));
+}
+//Navigation\\
+.navigation{
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #EAEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    bottom: 0
+  }
+  .navigation ul{
+    display: flex;
+    width: 350px;
+  }
+  .navigation ul li{
+    list-style: none;
+    position: relative;
+    /* 350 / 4 = 70*/
+    width: 87.5px;
+    height: 60px;
+    z-index: 2;
+  }
+  .navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    color: #222327;
+  }
+  .navigation ul li.active a .icon{
+    transform: translateY(-32px);
+    color: #12CD26;
+  }
+  .navigation ul li a .text {
+  position: absolute;
+  background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #1a73e8, #6f96ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(15px);
+  text-shadow: 0 0 8px rgba(0,0,0,0.3); /* Agrega sombra al texto para crear el fondo gris */
+  }
+  .navigation ul li.active a .text{
+    transform: translateY(-4px);
+    opacity:1;
+  }
+  .navigation ul li:nth-child(1).active ~ .indicator{	
+    transform: translateX(calc(87.5px*0));
+  }
+  .navigation ul li:nth-child(2).active ~ .indicator{	
+    transform: translateX(calc(87.5px*1));
+  }
+  .navigation ul li:nth-child(3).active ~ .indicator{	
+    transform: translateX(calc(87.5px*2));
+  }
+  .navigation ul li:nth-child(4).active ~ .indicator{	
+    transform: translateX(calc(87.5px*3));
+  }

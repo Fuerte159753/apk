@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <div class="fondo">
+    <div class="circulo"></div>
+      <div class="tolbar">
+        <ion-buttons slot="start">
+          <ion-button class="ba" routerLink="/login">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <h1 class="custom-title">Registro</h1>
+      </div>
+      <br>
+      <form (ngSubmit)="on()" [formGroup]="registroForm">
+        <div class="formulario">
+          <br>
+            <ion-input type="text" formControlName="nombre" id="nameInput" aria-required="true" class="custom-input" aria-labelledby="nameLabel" placeholder="Nombre(s):"></ion-input>
+        <br>
+            <ion-input type="text" formControlName="apellido" id="apellidoInput" aria-required="true" class="custom-input"
+              aria-labelledby="apellidoLabel" placeholder="Apellido(s):"></ion-input>
+        <br>
+            <ion-select formControlName="rutaSeleccionada" aria-required="true" placeholder="Selecciona Tu Localidad:"  class="custom-input">
+              <ion-select-option *ngFor="let ruta of rutas" [value]="ruta">{{ ruta }}</ion-select-option>
+            </ion-select>
+        <br>
+            <ion-input type="text" formControlName="direccion" id="direccionInput" aria-required="true" class="custom-input" aria-labelledby="direccionLabel" placeholder="Direccion:"></ion-input>
+        <br>
+            <ion-input type="number" formControlName="telefono" id="telefonoInput" aria-required="true" class="custom-input" aria-labelledby="telefonoLabel" placeholder="Telefono:"></ion-input>
+        <br>
+            <ion-input type="email" formControlName="correo" id="correoInput" aria-required="true" class="custom-input"
+              aria-labelledby="correoLabel" placeholder="Correo:"></ion-input>
+        <br>
+            <ion-input type="password" formControlName="password" id="passwordInput" aria-required="true" class="custom-input"
+              aria-labelledby="passwordLabel" placeholder="Contraseña:"></ion-input>
+        <br>
+            <ion-input type="password" formControlName="p_verifi" id="p-verifiInput" aria-required="true" class="custom-input"
+              aria-labelledby="verificarPasswordLabel" placeholder="Verificar Contraseña:"></ion-input>
+        <br>
+          <button type="submit" expand="full" shape="round" color="primary" class="custom-button">Registrarse</button>
+        <br>
+        </div>
+     </form>  
+  </div>
+</ion-content>
